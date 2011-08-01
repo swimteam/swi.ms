@@ -21,6 +21,25 @@
 
       <p>Sign in to claim your swi.ms username and get your first tip:</p>
 
+      <p><fb:login-button autologoutlink="true"></fb:login-button></p>
+      <p><fb:like></fb:like></p>
+
+      <div id="fb-root"></div>
+      <script>
+        window.fbAsyncInit = function() {
+          FB.init({appId: '198674690188520', status: true, cookie: true,
+                   xfbml: true});
+        };
+        (function() {
+          var e = document.createElement('script');
+          e.type = 'text/javascript';
+          e.src = document.location.protocol +
+            '//connect.facebook.net/en_US/all.js';
+          e.async = true;
+          document.getElementById('fb-root').appendChild(e);
+        }());
+      </script>
+
       <p><a href="http://swi.ms">Login with Facebook</a></p>
 
       <p><a href="http://blog.swi.ms/post/8076606620/what-happens-on-swi-ms-stays-on-swi-ms-a-privacy">Privacy Policy</a></p>
