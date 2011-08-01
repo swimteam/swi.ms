@@ -1,0 +1,23 @@
+h1 { 
+  font-family: 'Paytone One', sans-serif; 
+  font-weight: 400; 
+  font-size: 80px; 
+  line-height: 50px; 
+  margin: 50px 0 0; 
+}
+
+* { 
+  font-family: 'Ubuntu', sans-serif; 
+}
+
+#mission { 
+  margin:50px auto 50px auto;
+  text-align:left;
+  width:600px;
+}
+
+#main {
+  width:700px;
+  margin:0 auto;
+}
+
