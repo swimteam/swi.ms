@@ -36,7 +36,11 @@
           // uid: "622016185"
 
         }
-        alert( session.uid );
+        if( session ) {
+          alert( "you are logged in as: " + session.uid );
+        } else {
+          alert( "you are NOT logged in" );
+        }
       });
     };
 
