@@ -6,6 +6,13 @@
     %h1 swi.ms
     %h2 The first great app for swimmers.
   
+    %p
+      %fb:login-button{:autologoutlink => "true"}
+      / perms="user_checkins,offline_access,user_about_me"
+
+      #fb-root
+        / a hotel room for facebook
+        
     =yield
   
     =partial 'footer'

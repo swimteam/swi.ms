@@ -2,6 +2,46 @@
   %a{:href => "http://blog.swi.ms/post/8076606620/what-happens-on-swi-ms-stays-on-swi-ms-a-privacy"} 
     Privacy Policy
 
+%p
+  %fb:like{:action => "like", :href => "http://swi.ms", :send => "false", :show_faces => "true", :width => "450"}
+
+:javascript
+  var session;
+  window.fbAsyncInit = function() {
+    FB.init({appId: '127537457338214', status: true, cookie: true,
+             xfbml: true});
+    FB.getLoginStatus(function(response) {
+      if (response.authResponse) {
+        session = response;
+      } else {
+        session = FB.getSession();
+
+        // access_token:
+        // secret: 
+        // session_key: 
+        // sig: 
+        // uid: 
+
+      }
+      if( session ) {
+        //console.log( "You are logged in as: " + session.uid );
+        window.location = "/signup";
+      } else {
+        console.log( "You are NOT logged in." );
+      }
+    });
+  };
+
+  (function() {
+    var e = document.createElement('script');
+    e.type = 'text/javascript';
+    e.src = document.location.protocol +
+      '//connect.facebook.net/en_US/all.js';
+    e.async = true;
+    document.getElementById('fb-root').appendChild(e);
+  }());
+
+
 :javascript
   //google analytics
     var _gaq = _gaq || [];
