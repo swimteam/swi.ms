@@ -21,7 +21,15 @@
     window.fbAsyncInit = function() {
       FB.init({appId: '127537457338214', status: true, cookie: true,
                xfbml: true});
+      FB.getLoginStatus(function(response) {
+        if (response.authResponse) {
+          alert(" logged in and connected user, someone you know" );
+        } else {
+          alert( "no user session available, someone you dont know" );
+        }
+      });
     };
+
     (function() {
       var e = document.createElement('script');
       e.type = 'text/javascript';
