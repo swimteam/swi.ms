@@ -1,6 +1,7 @@
 source "http://rubygems.org"
 
-gem "sinatra", "1.1.3"
+gem "haml",     "~> 3.1.2"
+gem "sinatra",  "~> 1.2.6"
 
 group :development do
   gem "heroku", "~> 2.2.8"

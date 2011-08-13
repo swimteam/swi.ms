@@ -1,0 +1,32 @@
+#main
+
+  #mission
+    %p Our mission:
+    %p 1. To help you be the best swimmer you can be.
+    %p 2. To help your community support swimming for everyone.
+
+  %p Sign in to claim your swi.ms username and get your first tip:
+
+  %p
+    %fb:login-button{:autologoutlink => "true", :perms => "user_about_me"}
+    / perms="user_checkins,offline_access,user_about_me"
+
+  %p
+    %fb:like
+
+  #fb-root
+    / a hotel room for facebook 
+
+  :javascript
+    window.fbAsyncInit = function() {
+      FB.init({appId: '127537457338214', status: true, cookie: true,
+               xfbml: true});
+    };
+    (function() {
+      var e = document.createElement('script');
+      e.type = 'text/javascript';
+      e.src = document.location.protocol +
+        '//connect.facebook.net/en_US/all.js';
+      e.async = true;
+      document.getElementById('fb-root').appendChild(e);
+    }());

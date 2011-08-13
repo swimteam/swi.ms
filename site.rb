@@ -1,17 +1,29 @@
 #!/usr/bin/env ruby
 
-require 'rubygems'
-require 'sinatra'
+require "haml"
+require "rubygems"
+require "sinatra"
 
-before do
-  @page_title = 'Swim.'
+class Swims < Sinatra::Base
+
+  before do
+    @page_title = "Swim."
+  end
+
+  get "/" do
+    haml :index 
+  end
+
+  get "/signup" do
+    haml :signup 
+  end
+
+  error 404 do
+    haml :error 
+  end
+
+  def partial(page, options={})
+    haml page.to_sym, options.merge!(:layout => false)
+  end
+
 end
-
-get '/' do
-  File.read(File.join('public', 'index.html'))
-end
-
-error 404 do
-  File.read(File.join('public', '404.html'))
-end
-

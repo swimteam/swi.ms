@@ -37,8 +37,9 @@ h1 {
 }
 
 #freestyle    { background-position:   0px   0px; }
-#backstroke   { background-position: 128px   0px; }
-#floating     { background-position:  64px   0px; }
 #breaststroke { background-position:   0px  64px; }
+#backstroke   { background-position: 128px   0px; }
 #butterfly    { background-position: -64px  64px; }
 #dogpaddle    { background-position:  64px  64px; }
+#floating     { background-position:  64px   0px; }
+
