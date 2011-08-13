@@ -18,16 +18,15 @@
     / a hotel room for facebook 
 
   :javascript
+    var session;
     window.fbAsyncInit = function() {
       FB.init({appId: '127537457338214', status: true, cookie: true,
                xfbml: true});
       FB.getLoginStatus(function(response) {
         if (response.authResponse) {
-          alert(" logged in and connected user, someone you know" );
+          session = response;
         } else {
-          alert( "no user session available, someone you dont know, calling getSession" );
-          var session = FB.getSession();
-          alert( session.uid );
+          session = FB.getSession();
 
           // access_token
           // base_domain: "swi.ms"
@@ -37,6 +36,7 @@
           // uid: "622016185"
 
         }
+        alert( session.uid );
       });
     };
 
