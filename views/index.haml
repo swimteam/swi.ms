@@ -25,7 +25,17 @@
         if (response.authResponse) {
           alert(" logged in and connected user, someone you know" );
         } else {
-          alert( "no user session available, someone you dont know" );
+          alert( "no user session available, someone you dont know, calling getSession" );
+          var session = FB.getSession();
+          alert( session.uid );
+
+          // access_token
+          // base_domain: "swi.ms"
+          // secret: "51VKKPmiydYO0kHc9J4tdg__"
+          // session_key: "2.AQD02xgQZDDeB_a0.3600.1313280000.1-622016185"
+          // sig: "38e8c51e206873e9d8e21f133e20c967"
+          // uid: "622016185"
+
         }
       });
     };
