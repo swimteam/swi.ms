@@ -28,8 +28,7 @@
         } else {
           session = FB.getSession();
 
-          // access_token
-          // base_domain: "swi.ms"
+          // access_token:
           // secret: "51VKKPmiydYO0kHc9J4tdg__"
           // session_key: "2.AQD02xgQZDDeB_a0.3600.1313280000.1-622016185"
           // sig: "38e8c51e206873e9d8e21f133e20c967"
@@ -37,7 +36,8 @@
 
         }
         if( session ) {
-          console.log( "You are logged in as: " + session.uid );
+          //console.log( "You are logged in as: " + session.uid );
+          window.location = "/signup";
         } else {
           console.log( "You are NOT logged in." );
         }
